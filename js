@@ -52,7 +52,7 @@ function getCountries() {
             resultCountriesEl.classList.remove("d-none");
             spinnerEl.classList.add("d-none");
             let countriesList = jsonData;
-            displaySearchResults(countriesList);
+            displaySearchResults(countriesList,inputValue);
         })
 }
 
@@ -63,5 +63,6 @@ function searchResultsCountries(event) {
     inputValue = event.target.value;
     getCountries();
 }
-getCountries();
+
 searchInputEl.addEventListener("keyup", searchResultsCountries);
+getCountries();
